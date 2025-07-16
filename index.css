@@ -36,13 +36,11 @@
 
 }
 
-.container {
-    margin: 0 369px;
-}
+
 
 body {
-    width: 46vw;
-    margin: 0 auto;
+    width: 100%;
+    padding: 0 369px;
     background-color: var(--background-primary);
 
     text-align: center;
@@ -52,12 +50,14 @@ body {
 header {
     width: 100%;
     margin-top: 25px;
-
+ 
 }
 
 section {
     margin-top: 62px;
     max-width: 627px;
+    margin: 0 auto;
+   
 
     & #nav {
         text-align: left;
@@ -169,4 +169,36 @@ border-radius: 12px;
         cursor: pointer;
         color: var(--delete);
     };
+}
+
+#delete{
+    margin-top: 36px;
+    font: var(--paragraph);
+    color: var(--always-white);
+    height: 49px;
+    padding: 0 20px;
+    width: 100%;
+    background-color: var(--color-danger);
+display: flex;
+align-items: center;
+justify-content: space-between;
+border-radius: 12px;
+& div{
+    
+    display: flex;
+    gap: 8px;
+    align-items: center;
+    justify-content: center
+}
+}
+.hiden{
+    display: none !important; 
+}
+/* Responsividade */
+@media (max-width: 900px) {
+    body {
+        padding: 0 32px;
+        width: 100%;
+    }
+
 }
