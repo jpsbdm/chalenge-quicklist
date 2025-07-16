@@ -17,23 +17,23 @@ form.addEventListener('submit', (e) => {
   const newItem = document.createElement('div');
   newItem.classList.add('item');
 
-  // Cria uma nova div para o radio e o label
-  const radioDiv = document.createElement('div');
+  // Cria uma nova div para o checkbox e o label
+  const checkboxDiv = document.createElement('div');
 
-  // Cria um novo radio button
-  const radio = document.createElement('input');
-  radio.type = 'radio';
-  radio.id = inputValue.replace(' ', '-'); // Substitui espaços por hífens
-  radio.name = 'item';
+  // Cria um novo checkbox button
+  const checkbox = document.createElement('input');
+  checkbox.type = 'checkbox';
+  checkbox.id = inputValue.replace(' ', '-'); // Substitui espaços por hífens
+  checkbox.name = 'item';
 
   // Cria uma nova label
   const label = document.createElement('label');
   label.textContent = inputValue;
-  label.htmlFor = radio.id;
+  label.htmlFor = checkbox.id;
 
-  // Adiciona o radio e o label à div
-  radioDiv.appendChild(radio);
-  radioDiv.appendChild(label);
+  // Adiciona o checkbox e o label à div
+  checkboxDiv.appendChild(checkbox);
+  checkboxDiv.appendChild(label);
 
   // Cria um novo SVG da lixeira
   const svg = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
@@ -55,8 +55,8 @@ form.addEventListener('submit', (e) => {
     </path>
   `;
 
-  // Adiciona a div do radio, o SVG e o novo item à div de itens
-  newItem.appendChild(radioDiv);
+  // Adiciona a div do checkbox, o SVG e o novo item à div de itens
+  newItem.appendChild(checkboxDiv);
   newItem.appendChild(svg);
   itensDiv.appendChild(newItem);
 

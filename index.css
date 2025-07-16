@@ -158,6 +158,10 @@ border-radius: 12px;
     background-repeat: no-repeat;
     border: none;
 }
+    & input:checked + label {
+        text-decoration: line-through;
+        color: var(--content-secondary);
+    }
 
 
     & label {
@@ -201,4 +205,7 @@ border-radius: 12px;
         width: 100%;
     }
 
+}
+.tachado {
+  text-decoration: line-through;
 }
