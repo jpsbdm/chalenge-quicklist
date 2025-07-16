@@ -1,6 +1,7 @@
 // Seleciona o formulário e o input
 const form = document.querySelector('form');
 const input = document.querySelector('input');
+const deleteMessage = document.getElementById('delete');
 
 // Seleciona a div que contém os itens
 const itensDiv = document.querySelector('.itens');
@@ -63,3 +64,19 @@ form.addEventListener('submit', (e) => {
   input.value = '';
 });
 
+// Remove um item ao clicar no SVG da lixeira
+itensDiv.addEventListener('click', (event) => {
+  const svg = event.target.closest('svg');
+  if (!svg) return;
+
+  const item = svg.closest('.item');
+  if (item) {
+    item.remove();
+
+    // Mostra a mensagem de item removido por 3 segundos
+    deleteMessage.classList.remove('hiden');
+    setTimeout(() => {
+      deleteMessage.classList.add('hiden');
+    }, 1000);
+  }
+});
